@@ -34,6 +34,36 @@
         </div>
         <!-- Add Score Button -->
         <button class="add-score-btn" onclick="openDialog()">Add New Score</button>
+         <!-- Dialog Box -->
+        <div id="overlay"></div>
+        <div id="dialog">
+            <h3>Add New Score</h3>
+            <label for="date">Date:</label>
+            <input type="text" id="date" placeholder="Enter date (e.g., 2025-01-15)">
+            
+            <label for="playerA">Player A:</label>
+            <select id="playerA">
+                <option value="KJ">KJ</option>
+                <option value="Luis">Luis</option>
+                <option value="Petar">Petar</option>
+            </select>
+            
+            <label for="playerB">Player B:</label>
+            <select id="playerB">
+                <option value="KJ">KJ</option>
+                <option value="Luis">Luis</option>
+                <option value="Petar">Petar</option>
+            </select>
+            
+            <label for="scoreA">Player A Score:</label>
+            <input type="text" id="scoreA" placeholder="Enter Player A's score">
+            
+            <label for="scoreB">Player B Score:</label>
+            <input type="text" id="scoreB" placeholder="Enter Player B's score">
+            
+            <button onclick="submitScore()">Submit</button>
+            <button onclick="closeDialog()">Cancel</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
