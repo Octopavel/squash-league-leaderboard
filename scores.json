@@ -1,9 +1,9 @@
 {
     "KJ": {
-        "vLuis": { "wins": 0, "losses": 0 },
-        "vPetar": { "wins": 0, "losses": 0 }
+        "vLuis": { "wins": 1, "losses": 2 },
+        "vPetar": { "wins": 3, "losses": 4 }
     },
     "Luis": {
-        "vPetar": { "wins": 0, "losses": 0 }
+        "vPetar": { "wins": 5, "losses": 6 }
     }
 }
