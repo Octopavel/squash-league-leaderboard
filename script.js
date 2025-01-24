@@ -28,7 +28,6 @@ function submitScore() {
 document.addEventListener('DOMContentLoaded', () => {
 // Fetch scores from the JSON file
     fetch('scores.json')
-        throw new Error('Success');
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to load scores.json');
@@ -50,4 +49,4 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Error:', error);
-    });
+});
