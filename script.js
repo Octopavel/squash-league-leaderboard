@@ -25,3 +25,27 @@ function submitScore() {
 
     closeDialog();
 }
+// Fetch scores from the JSON file
+fetch('scores.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Failed to load scores.json');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Update KJ's scores
+        document.querySelector('#kj-luis span:nth-child(1)').textContent = data.KJ.vLuis.wins;
+        document.querySelector('#kj-luis span:nth-child(2)').textContent = data.KJ.vLuis.losses;
+
+        // Update Luis's scores
+        document.querySelector('#luis-petar span:nth-child(1)').textContent = data.Luis.vPetar.wins;
+        document.querySelector('#luis-petar span:nth-child(2)').textContent = data.Luis.vPetar.losses;
+
+        // Update Petar's scores
+        document.querySelector('#petar-kj span:nth-child(1)').textContent = data.KJ.vPetar.losees;
+        document.querySelector('#petar-kj span:nth-child(2)').textContent = data.KJ.vPetar.wins;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
