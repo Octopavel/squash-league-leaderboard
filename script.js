@@ -26,7 +26,7 @@ function submitScore() {
     closeDialog();
 }
 document.addEventListener('DOMContentLoaded', () => {
-// Fetch scores from the JSON file
+    // Fetch scores from the JSON file
     fetch('scores.json')
         .then(response => {
             if (!response.ok) {
@@ -44,9 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#luis-petar span:nth-child(2)').textContent = data.Luis.vPetar.losses;
     
             // Update Petar's scores
-            document.querySelector('#petar-kj span:nth-child(1)').textContent = data.KJ.vPetar.losees;
+            document.querySelector('#petar-kj span:nth-child(1)').textContent = data.KJ.vPetar.losses;
             document.querySelector('#petar-kj span:nth-child(2)').textContent = data.KJ.vPetar.wins;
         })
         .catch(error => {
-            console.error('Error:', error));
-});
+            console.error('Error:', error);
+        });
+}); // Missing closing curly bracket added here
+
