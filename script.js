@@ -27,6 +27,7 @@ function submitScore() {
 }
 // Fetch scores from the JSON file
 fetch('scores.json')
+    throw new Error('Success');
     .then(response => {
         if (!response.ok) {
             throw new Error('Failed to load scores.json');
