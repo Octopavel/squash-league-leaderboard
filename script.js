@@ -48,5 +48,5 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('#petar-kj span:nth-child(2)').textContent = data.KJ.vPetar.wins;
         })
         .catch(error => {
-            console.error('Error:', error);
+            console.error('Error:', error));
 });
